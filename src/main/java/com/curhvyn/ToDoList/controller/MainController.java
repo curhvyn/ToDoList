@@ -24,7 +24,7 @@ public class MainController {
 		return "index";
 	}
 	
-	@DeleteMapping("/tasks/{id}")
+	@RequestMapping("/tasks/{id}")
 	public String closeTask(@PathVariable int id) {
 		taskRepository.deleteById(id);
 		return "redirect:/";
